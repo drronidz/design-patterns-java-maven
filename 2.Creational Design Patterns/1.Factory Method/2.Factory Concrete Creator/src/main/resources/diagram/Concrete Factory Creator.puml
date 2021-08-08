@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam class {
+    BackgroundColor white
+    BorderColor black
+    ArrowColor black
+}
+skinparam note {
+ BackgroundColor lightgrey
+ BorderColor black
+}
+
+
+interface Creator {
+    + createProduct() : Product
+}
+interface Product {
+    + getName() : String
+}
+
+class ConcreteCreator {
+    + createProduct() : Product
+}
+class ConcreteProduct {
+    + getName() : String
+}
+class ConcreteProductOne {
+    + getName() : String
+}
+class ConcreteProductTwo {
+    + getName() : String
+}
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct
+ConcreteProduct <|-- ConcreteProductOne
+ConcreteProduct <|-- ConcreteProductTwo
+ConcreteCreator ..> ConcreteProduct
+Creator ..> Product
+
+@enduml
