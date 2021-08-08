@@ -19,6 +19,7 @@
         <module>5.Static Block Initialization Approach</module>
         <module>6.Bill Pugh Approach</module>
         <module>7.Enum Singleton</module>
+        <module>8.Reflection</module>
     </modules>
 
 
