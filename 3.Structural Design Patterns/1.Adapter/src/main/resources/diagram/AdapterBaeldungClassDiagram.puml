@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client {
+}
+
+interface MovableAdapter <<Interface>> {
+    + speed() : double
+}
+note left : Returns speed in KMPH
+
+class MovableAdapterImpl <<Class>> {
+    Movable luxuryCars
+    + speed() : double
+}
+
+interface Movable {
+    + speed () : double
+}
+
+note top : Returns speed in MPH
+
+Client --> MovableAdapter : target
+MovableAdapter <|-- MovableAdapterImpl
+MovableAdapterImpl --> Movable : adaptee
+
+@enduml

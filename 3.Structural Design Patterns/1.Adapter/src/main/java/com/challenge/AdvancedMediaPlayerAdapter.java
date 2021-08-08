@@ -7,7 +7,7 @@ Author Name : @ DRRONIDZ
 DATE : 8/3/2021 12:40 AM
 */
 
-import com.tools.MediaPlayer;
+
 
 public class AdvancedMediaPlayerAdapter implements MediaPlayer {
     AdvancedMediaPlayer advancedMusicPlayer;
