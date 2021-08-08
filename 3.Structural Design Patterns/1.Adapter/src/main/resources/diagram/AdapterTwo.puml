@@ -1,0 +1,39 @@
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+hide Client members
+show Client methods
+
+
+class Target {
+    request()
+}
+hide Target members
+show Target methods
+
+
+class Adapter {
+  request()
+}
+note right : Instead of using composition to adapt the Adaptee, the\nAdapter new subclasses the Adaptee and the Target classes
+hide Adapter members
+show Adapter methods
+
+
+class Adaptee {
+    specificRequest()
+}
+hide Adaptee members
+show Adaptee methods
+
+
+Client --> Target
+Adapter --> Target
+Adapter --> Adaptee
+
+@enduml
+
+

@@ -1,0 +1,39 @@
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+note bottom : The client sees only the Target interface
+hide Client members
+
+
+interface Target <<interface>> {
+    request()
+}
+note left : The Adapter implements the Target interface
+hide Target members
+show Target methods
+
+
+class Adapter {
+  request()
+}
+note bottom : Adapter is composed with the Adaptee
+hide Adapter members
+show Adapter methods
+
+
+class Adaptee {
+    specificRequest()
+}
+note bottom : All requests get delegated to the Adaptee
+hide Adaptee members
+show Adaptee methods
+
+Target <|.. Adapter
+Client --> Target
+Adapter --> Adaptee
+
+@enduml
+
+
