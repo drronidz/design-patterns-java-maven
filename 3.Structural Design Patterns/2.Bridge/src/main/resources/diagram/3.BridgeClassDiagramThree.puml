@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class RemoteControl {
+    + on () : void
+    + off () : void
+    + setChannel () : void
+    ..
+    // more methods
+}
+note right of RemoteControl::setChannel
+   implementor.tuneChannel(channel);
+end note
+
+class ConcreteRemote {
+    + currentStation
+    + on () : void
+    + off () : void
+    + setChannel () : void
+    + nextChannel () : void
+    + previousChannel () : void
+    ..
+    // more methods
+}
+note left of ConcreteRemote::nextChannel
+  setChannel(currentStation + 1);
+end note
+
+class RCA {
+    + on () : void
+    + off () : void
+    + tuneChannel () : void
+    ..
+    // more methods
+}
+
+
+class Sony {
+    + on () : void
+    + off () : void
+    + tuneChannel () : void
+    ..
+    // more methods
+}
+
+class TV {
+    + on () : void
+    + off () : void
+}
+hide TV members
+show TV methods
+
+
+TV <|-- Sony
+TV <|-- RCA
+RemoteControl --> TV : Has-A
+RemoteControl <|-- ConcreteRemote
+
+@enduml

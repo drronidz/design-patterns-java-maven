@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam groupInheritance 2
+
+class Abstraction {
+    + operation ()
+}
+note left : imp.OperationImp()
+hide Abstraction members
+show Abstraction methods
+
+class RefinedAbstraction {
+
+}
+hide RefinedAbstraction members
+show RefinedAbstraction methods
+
+class Implementor {
+   + operationImpl ()
+}
+hide Implementor members
+show Implementor methods
+
+
+class ConcreteImplementorA {
+    + operationImpl ()
+}
+hide ConcreteImplementorA members
+show ConcreteImplementorA methods
+
+
+class ConcreteImplementorB {
+    + operationImpl ()
+}
+
+Abstraction <|-- RefinedAbstraction
+Abstraction o-- Implementor
+Implementor <|-- ConcreteImplementorA
+Implementor <|-- ConcreteImplementorB
+
+@enduml
