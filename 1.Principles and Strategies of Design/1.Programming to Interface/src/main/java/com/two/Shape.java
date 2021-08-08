@@ -1,12 +1,12 @@
-package com.example.one;
+package com.two;
 
 /*
 PROJECT NAME : design-patterns-java
 Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
-DATE : 8/1/2021 5:30 PM
+DATE : 8/1/2021 5:31 PM
 */
 
-public class SqlRow{
-
+public interface Shape {
+    void draw();
 }

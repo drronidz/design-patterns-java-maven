@@ -1,25 +1,24 @@
-package com.example.one;
+package com.one;
 
 /*
 PROJECT NAME : design-patterns-java
 Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
-DATE : 8/1/2021 5:27 PM
+DATE : 8/1/2021 5:26 PM
 */
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CoupeDB implements Database{
+public class SedanDB implements Database{
 
     @Override
     public List<Vehicle> findAll() {
-        List<Vehicle> coupes = new ArrayList<>();
+        List<Vehicle> sedans = new ArrayList<>();
 //        List<SqlRow> rows = Database.instance.all();
 //        for(SqlRow row : rows) {
-//            coupes.add(new Vehicle(row));
+//            sedans.add(new Vehicle(row));
 //        }
-        return coupes;
+        return sedans;
     }
 }
-

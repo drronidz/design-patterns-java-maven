@@ -1,4 +1,4 @@
-package com.example.one;
+package com.one;
 
 /*
 PROJECT NAME : design-patterns-java
@@ -12,10 +12,10 @@ import java.util.List;
 public class Printer {
     // Coding for implementation & not for interface
 
-//    private com.example.one.TruckDB truckDB ;
-//    private com.example.one.SedanDB sedanDB ;
-//    private com.example.one.CoupeDB coupeDB ;
-//    private com.example.one.VanDB vanDB ;
+//    private com.one.TruckDB truckDB ;
+//    private com.one.SedanDB sedanDB ;
+//    private com.one.CoupeDB coupeDB ;
+//    private com.one.VanDB vanDB ;
 
     // Coding for interface & not for implementation
 

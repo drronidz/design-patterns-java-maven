@@ -1,4 +1,4 @@
-package com.example.two;
+package com.two;
 
 /*
 PROJECT NAME : design-patterns-java
@@ -7,9 +7,9 @@ Author Name : @ DRRONIDZ
 DATE : 8/1/2021 5:32 PM
 */
 
-public class Rectangle implements Shape {
+public class Square implements Shape {
     @Override
     public void draw() {
-        System.out.println("Drawing rectangle ...");
+        System.out.println("Drawing square ...");
     }
 }

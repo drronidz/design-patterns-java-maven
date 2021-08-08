@@ -1,4 +1,4 @@
-package com.example.two;
+package com.two;
 
 /*
 PROJECT NAME : design-patterns-java
