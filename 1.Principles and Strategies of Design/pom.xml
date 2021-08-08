@@ -10,6 +10,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>1.Principles and Strategies of Design</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>1.Programming to Interface</module>
+        <module>2.Composition over Inheritance</module>
+        <module>3.Delegation Principle</module>
+        <module>4.The Single Responsibility Principle</module>
+        <module>5.The Open Closed Principle</module>
+        <module>6.The Liskov Substitution Principle</module>
+        <module>7.The Interface Segregation Principle</module>
+        <module>8.Dependency Inversion Principle</module>
+    </modules>
 
 
 </project>

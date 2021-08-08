@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>1.Principles and Strategies of Design</module>
+        <module>Tools</module>
     </modules>
     <properties>
         <maven.compiler.source>1.15</maven.compiler.source>
