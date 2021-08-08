@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>8.Dependency Inversion Principle</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>1.Dependency Inversion Principle (Course)</module>
-        <module>2.Java 8 DIP implementation</module>
-        <module>3.Java 11 Implementation</module>
-        <module>entities</module>
-    </modules>
+    <artifactId>daos</artifactId>
 
 
 </project>
