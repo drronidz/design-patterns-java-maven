@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Socket <<Java Class>> {
+    + Socket()
+    + getVolt() : Volt
+}
+
+interface SocketAdapter <<Java Interface>> {
+    + get120Volt() : Volt
+    + get12Volt() : Volt
+    + get3Volt() : Volt
+}
+
+class SocketClassAdapter <<Java Class>> {
+    + SocketClassAdapter()
+    + get120Volt() : Volt
+    + get12Volt() : Volt
+    + get3Volt() : Volt
+    - convertVolt(Volt,int) : Volt
+}
+
+class SocketObjectAdapter <<Java Class>> {
+    + SocketObjectAdapter()
+    + get120Volt() : Volt
+    + get12Volt() : Volt
+    + get3Volt() : Volt
+    - convertVolt(Volt,int) : Volt
+}
+
+Socket <|-- SocketClassAdapter
+SocketObjectAdapter --> Socket
+
+SocketAdapter <|.. SocketClassAdapter
+SocketAdapter <|.. SocketObjectAdapter
+
+
+@enduml
