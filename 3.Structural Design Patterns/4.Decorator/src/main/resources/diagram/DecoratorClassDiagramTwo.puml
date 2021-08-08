@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Component {
+   + Operation ()
+}
+hide Component members
+show Component methods
+
+class ConcreteComponent {
+    + Operation ()
+}
+hide ConcreteComponent members
+show ConcreteComponent methods
+
+class Decorator {
+    + Operation ()
+}
+hide Decorator members
+show Decorator methods
+note left of Decorator::Operation
+    component->Operation()
+end note
+
+
+class ConcreteDecoratorA {
+    + Operation ()
+    + addedState
+}
+
+
+class ConcreteDecoratorB {
+    + Operation ()
+    + AddedBehavior()
+}
+hide ConcreteDecoratorB members
+show ConcreteDecoratorB methods
+note left of ConcreteDecoratorB::Operation
+    Decorator::Operation();
+    AddedBehavior();
+end note
+
+Component <|-- Decorator
+Component <|-- ConcreteComponent
+
+Decorator <|-- ConcreteDecoratorA
+Decorator <|-- ConcreteDecoratorB
+
+Component <--o Decorator : component
+
+
+
+@enduml

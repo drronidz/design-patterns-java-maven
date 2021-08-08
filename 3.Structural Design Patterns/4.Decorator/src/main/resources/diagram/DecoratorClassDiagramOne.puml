@@ -1,0 +1,70 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+abstract class InputStream
+hide InputStream members
+hide InputStream methods
+note top : Here's our abstract component.
+
+class FileInputStream
+hide  FileInputStream members
+hide  FileInputStream methods
+
+class StringBufferInputStream
+hide  StringBufferInputStream members
+hide  StringBufferInputStream methods
+
+class ByteArrayInputStream
+hide  ByteArrayInputStream members
+hide  ByteArrayInputStream methods
+
+abstract class FilterInputStream
+hide  FilterInputStream members
+hide  FilterInputStream methods
+note left : FilterInputStream is an abstract decorator.
+
+class PushbackInputStream
+hide  PushbackInputStream members
+hide  PushbackInputStream methods
+
+class BufferedInputStream
+hide  BufferedInputStream members
+hide  BufferedInputStream methods
+
+class DataInputStream
+hide  DataInputStream members
+hide  DataInputStream methods
+
+class LineNumberInputStream
+hide  LineNumberInputStream members
+hide  LineNumberInputStream methods
+
+InputStream <|-- FileInputStream
+InputStream <|-- StringBufferInputStream
+InputStream <|-- ByteArrayInputStream
+InputStream <|-- FilterInputStream
+
+FilterInputStream <|-- PushbackInputStream
+FilterInputStream <|-- BufferedInputStream
+FilterInputStream <|-- DataInputStream
+FilterInputStream <|-- LineNumberInputStream
+
+note "Finally, here are all our concrete decorators" as noteOne
+note "These InputStreams act as the concrete\n components that we will wrap with\n decortaors. There are a few more we\n didn't show, like ObjectInputStream." as noteTwo
+
+
+LineNumberInputStream ..  noteOne
+DataInputStream ..  noteOne
+BufferedInputStream .. noteOne
+PushbackInputStream .. noteOne
+
+
+
+
+
+
+
+
+
+@enduml
