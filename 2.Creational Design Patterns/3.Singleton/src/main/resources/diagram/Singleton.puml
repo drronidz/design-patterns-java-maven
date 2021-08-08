@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam class {
+    BackgroundColor white
+    BorderColor black
+    ArrowColor black
+}
+skinparam note {
+ BackgroundColor lightgrey
+ BorderColor black
+}
+
+class Singleton {
+    -{static} "instance"
+    -SingletonData
+    +{static} getInstance()
+    +SingletonOperation()
+    +getSingletonData()
+}
+
+note as NoteOne
+    return instance
+end note
+
+
+NoteOne .. Singleton
+
+
+@enduml
