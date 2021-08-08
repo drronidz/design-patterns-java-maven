@@ -14,6 +14,8 @@
     <modules>
         <module>1.Factory Abstract Creator</module>
         <module>2.Factory Concrete Creator</module>
+        <module>3.Factory Static Creator</module>
+        <module>4.Factory Challenge</module>
     </modules>
 
 
