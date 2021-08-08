@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam class {
+    BackgroundColor white
+    BorderColor black
+    ArrowColor black
+}
+skinparam note {
+ BackgroundColor lightgrey
+ BorderColor black
+}
+
+class Creator {
+AnOperation()
+size()
+}
+class ConcreteCreator{
+FactoryMethod()
+}
+class Product {
+}
+class ConcreteProduct {
+}
+
+note left of ConcreteCreator : " return new ConcreteProduct "
+note left of Creator: In AnOperation(),\n have the following:\n ...\n product = FactoryMethod()\n ...
+
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct
+ConcreteCreator ..> ConcreteProduct
+
+@enduml
