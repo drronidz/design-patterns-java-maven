@@ -1,4 +1,4 @@
-package com.baeldung.two.main;
+package com.two.main;
 
 /*
 PROJECT NAME : design-patterns-java
@@ -6,9 +6,9 @@ Author Name : @ DRRONIDZ
 DATE : 7/19/2021 10:30 PM
 */
 
-import main.com.example.two.dao.implementations.SimpleCustomerDAO;
-import main.com.example.two.entities.Customer;
-import main.com.example.two.services.CustomerService;
+import com.two.dao.implementations.SimpleCustomerDAO;
+import com.two.entities.Customer;
+import com.two.services.CustomerService;
 
 import java.util.HashMap;
 import java.util.Map;

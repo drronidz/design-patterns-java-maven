@@ -1,4 +1,4 @@
-package com.baeldung.two.entities;
+package com.two.entities;
 
 /*
 PROJECT NAME : design-patterns-java

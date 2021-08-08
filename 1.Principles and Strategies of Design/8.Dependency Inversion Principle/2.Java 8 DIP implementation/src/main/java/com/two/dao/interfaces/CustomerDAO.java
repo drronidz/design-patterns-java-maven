@@ -1,4 +1,4 @@
-package com.baeldung.two.dao.interfaces;
+package com.two.dao.interfaces;
 
 /*
 PROJECT NAME : design-patterns-java
@@ -6,7 +6,7 @@ Author Name : @ DRRONIDZ
 DATE : 7/19/2021 10:32 PM
 */
 
-import main.com.example.two.entities.Customer;
+import com.two.entities.Customer;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.baeldung.one;
+package com.one;
 
 /*
 PROJECT NAME : design-patterns-java
