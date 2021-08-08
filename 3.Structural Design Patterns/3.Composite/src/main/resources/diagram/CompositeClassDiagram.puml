@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client {}
+
+class Component {
+    + Operation ()
+    + Add (int Component)
+    + Remove (int Component)
+    + GetChild(int index : int)
+}
+
+class Leaf {
+     + Operation ()
+}
+
+class Composite {
+    + Operation ()
+    + Add (int Component)
+    + Remove (int Component)
+    + GetChild(int index : int)
+}
+note left of Composite::"Operation"
+  foreach child in children child.Operation()
+end note
+
+Component <|-right- Leaf
+Component <|-left- Composite
+Component <--o Composite : children
+Client --> Component
+
+
+
+
+@enduml
