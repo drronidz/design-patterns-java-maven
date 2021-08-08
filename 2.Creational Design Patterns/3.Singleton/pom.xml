@@ -16,6 +16,7 @@
         <module>2.Synchronized Approach</module>
         <module>3.Double Checked Locking Approach</module>
         <module>4.Eager Evaluation Approach</module>
+        <module>5.Static Block Initialization Approach</module>
     </modules>
 
 
