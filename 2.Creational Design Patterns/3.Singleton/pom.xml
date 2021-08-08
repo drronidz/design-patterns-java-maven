@@ -18,6 +18,7 @@
         <module>4.Eager Evaluation Approach</module>
         <module>5.Static Block Initialization Approach</module>
         <module>6.Bill Pugh Approach</module>
+        <module>7.Enum Singleton</module>
     </modules>
 
 
