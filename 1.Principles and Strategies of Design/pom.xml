@@ -20,6 +20,7 @@
         <module>6.The Liskov Substitution Principle</module>
         <module>7.The Interface Segregation Principle</module>
         <module>8.Dependency Inversion Principle</module>
+        <module>9.Dependency Injection Principle</module>
     </modules>
 
 

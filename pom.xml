@@ -11,6 +11,7 @@
     <modules>
         <module>1.Principles and Strategies of Design</module>
         <module>Tools</module>
+        <module>9.Dependency Injection Principle</module>
     </modules>
     <properties>
         <maven.compiler.source>1.15</maven.compiler.source>
