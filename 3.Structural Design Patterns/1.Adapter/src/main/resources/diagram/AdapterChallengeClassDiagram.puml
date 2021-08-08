@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class MediaPlayer <<interface>> {
+    + play () : void
+}
+
+class MediaAdapter {
+     - advancedMediaPlayer : AdvancedMediaPlayer
+     + MediaAdapter () : void
+     + play() : void
+}
+
+class AudioPlayer {
+    - mediaAdapter : MediaAdapter
+    + play() : void
+}
+
+class Client {
+    + main () : void
+}
+
+MediaAdapter --> MediaPlayer : implements
+AudioPlayer --> MediaPlayer : implements
+AudioPlayer --> MediaAdapter : uses
+package "Adapter Collection" <<Rectangle>> {
+
+    interface AdvancedMediaPlayer <<interface>> {
+        + playVLC() : void
+        + playMP4() : void
+    }
+
+    class VLCPlayer {
+         + playVLC() : void
+         + playMP4() : void
+    }
+
+    class MP4Player {
+         + playVLC() : void
+         + playMP4() : void
+    }
+
+    VLCPlayer -left-> AdvancedMediaPlayer
+    MP4Player -up-> AdvancedMediaPlayer
+}
+
+MediaAdapter --> "Adapter Collection" : uses
+Client -right-> AudioPlayer : uses
+
+@enduml
