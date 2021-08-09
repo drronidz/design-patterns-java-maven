@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client methods
+note left : Happy client whose job\njust became easier\nof the facade
+Client -right-> Facade
+
+class Facade
+hide Facade methods
+note top : Unified interface that is easier to use.
+
+
+package "subsystem classes" <<Rectangle>> {
+
+  class ClassOne
+  hide ClassOne methods
+
+  class ClassTwo
+  hide ClassTwo methods
+
+  class ClassThree
+  hide ClassThree methods
+
+  class ClassFour
+  hide ClassFour methods
+
+  class ClassFive
+  hide ClassFive methods
+
+  class ClassSix
+  hide ClassSix methods
+
+  ClassOne -- Facade
+  ClassOne -- ClassTwo
+  ClassOne -- ClassThree
+
+  ClassTwo -- ClassFour
+
+  ClassFour -- ClassFive
+  ClassFour -- ClassSix
+
+  ClassThree -- ClassFive
+  ClassThree -- ClassSix
+}
+
+
+
+@enduml
