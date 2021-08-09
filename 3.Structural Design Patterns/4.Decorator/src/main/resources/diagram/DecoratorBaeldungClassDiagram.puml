@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ChristmasTree <<interface>> {
+    + decorate () : String
+}
+hide ChristmasTree members
+show ChristmasTree methods
+
+class ChristmasTreeImpl {
+    + decorate () : String
+}
+hide ChristmasTreeImpl members
+show ChristmasTreeImpl methods
+
+class TreeDecorator {
+    + decorate () : String
+}
+hide TreeDecorator members
+show TreeDecorator methods
+
+class TreeTopper {
+    + ChristmasTree tree
+    + decorate () : String
+    - decorateWithTreeTopper () : String
+}
+
+class Tinsel {
+    + ChristmasTree tree
+    + decorate () : String
+    - decorateWithTinsel () : String
+}
+
+class Garland {
+    + ChristmasTree tree
+    + decorate () : String
+    - decorateWithGarland () : String
+}
+
+class BubbleLights {
+    + ChristmasTree tree
+    + decorate () : String
+    - decorateWithBubbleLights () : String
+}
+ChristmasTree <-- TreeDecorator
+ChristmasTree <|-- TreeDecorator
+ChristmasTree <|-- ChristmasTreeImpl
+
+
+TreeDecorator <|-- Tinsel
+TreeDecorator <|-- Garland
+TreeDecorator <|-- BubbleLights
+TreeDecorator <|-- TreeTopper
+
+@enduml
