@@ -18,7 +18,7 @@ public class Robot implements IRobot {
 
     @Override
     public void print() {
-        System.out.println(" This is a " +robotType+ " type robot with "+colorOfRobot+ "color");
+        System.out.println(" This is a " +robotType+ " type robot with "+colorOfRobot+ " color");
     }
 
     @Override
