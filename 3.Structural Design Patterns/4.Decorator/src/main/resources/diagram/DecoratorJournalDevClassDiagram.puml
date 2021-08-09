@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Car <<Java Interface>> {
+    + assemble() : void
+}
+hide Car members
+show Car methods
+
+
+class BasicCar <<Java Class>> {
+    + BasicCar()
+    + assemble() : void
+}
+hide BasicCar members
+show BasicCar methods
+
+class CarDecorator <<Java Class>> {
+    + CarDecorator(Car)
+    + assemble() : void
+}
+hide BasicCar members
+show BasicCar methods
+
+class SportsCar <<Java Class>> {
+    + SportsCar(Car)
+    + assemble() : void
+    - decorateSportsCar() : void
+}
+hide SportsCar members
+show SportsCar methods
+
+class LuxuryCar <<Java Class>> {
+    + LuxuryCar(Car)
+    + assemble() : void
+    - decorateLuxuryCar() : void
+}
+hide LuxuryCar members
+show LuxuryCar methods
+
+BasicCar .left.> Car
+CarDecorator ..> Car
+Car <|-- CarDecorator
+CarDecorator <|-- SportsCar
+CarDecorator <|-- LuxuryCar
+
+
+
+
+@enduml
