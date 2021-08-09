@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/class-diagram
+namespace com.javatpoint <<Rectangle>> {
+
+interface MobileShop <<Java Interface>> {
+    + modelNo () : void
+    + price () : void
+}
+hide MobileShop members
+show MobileShop methods
+
+class Iphone {
+     + modelNo () : void
+     + price () : void
+}
+hide Iphone members
+show Iphone methods
+
+class Samsung {
+     + modelNo () : void
+     + price () : void
+}
+hide Samsung members
+show Samsung methods
+
+class Blackberry {
+     + modelNo () : void
+     + price () : void
+}
+hide Blackberry members
+show Blackberry methods
+
+MobileShop <|-- Iphone : implements
+MobileShop <|-- Samsung : implements
+MobileShop <|-- Blackberry : implements
+}
+
+class ShopKeeper {
+    - iphone : MobileShop
+    - samsung : MobileShop
+    - blackberry : MobileShop
+    + ShopKeeper ()
+    + iphoneSale() : void
+    + samsungSale () : void
+    + blackberrySale () : void
+}
+
+com.javatpoint <|-- ShopKeeper
+
+
+
+@enduml
