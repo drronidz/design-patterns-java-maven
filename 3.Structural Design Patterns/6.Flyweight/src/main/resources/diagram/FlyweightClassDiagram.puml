@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client members
+
+
+class Flyweight {
+    Operation (extrinsicState)
+}
+hide Flyweight members
+show Flyweight methods
+
+class ConcreteFlyweight {
+    Operation (extrinsicState)
+    intrinsicState
+}
+
+class UnsharedConcreteFlyweight {
+    Operation (extrinsicState)
+    allState
+}
+
+class FlyweightFactory {
+    GetFlyweight(key)
+}
+hide FlyweightFactory members
+show FlyweightFactory methods
+
+note left of FlyweightFactory : if (flyweight[key] exists) {\nreturn existing flyweight;\n } else {\n create new flyweight\n add it to pool of flyweights;\n return the new flyweight;\n}
+
+
+Flyweight <|-- ConcreteFlyweight
+Flyweight <|-- UnsharedConcreteFlyweight
+Flyweight <--o FlyweightFactory : flyweights
+FlyweightFactory <-- Client
+ConcreteFlyweight <-- Client
+UnsharedConcreteFlyweight <-- Client
+
+
+
+
+@enduml
