@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+namespace com.tutorialspoint <<Rectangle>> {
+interface Shape <<Java Interface>> {
+    + draw () : void
+}
+
+class Circle {
+    + draw () : void
+}
+hide Circle members
+show Circle methods
+
+class Rectangle {
+    + draw () : void
+}
+hide Rectangle members
+show Rectangle methods
+
+class Square {
+    + draw () : void
+}
+hide Square members
+show Square methods
+
+Shape <|-- Circle : implements
+Shape <|-- Rectangle : implements
+Shape <|-- Square : implements
+
+}
+
+class ShapeMaker {
+    - circle : Shape
+    - rectangle : Shape
+    - square : Shape
+    + ShapeMaker ()
+    + drawCircle () : void
+    + drawRectangle () : void
+    + drawSquare () : void
+}
+
+class Client {
+    + main () : void
+}
+hide Client members
+show Client methods
+
+ShapeMaker -right-> com.tutorialspoint
+Client --> ShapeMaker
+@enduml
