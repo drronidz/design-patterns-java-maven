@@ -28,11 +28,10 @@ public class Client {
             ShapeMaker shapeMaker = new ShapeMaker();
 
             switch (choice) {
-                case 1: shapeMaker.drawCircle();  break;
-                case 2: shapeMaker.drawRectangle(); break;
-                case 3: shapeMaker.drawSquare(); break;
-                default:
-                    System.out.println("Nothing you drew");
+                case 1 -> shapeMaker.drawCircle();
+                case 2 -> shapeMaker.drawRectangle();
+                case 3 -> shapeMaker.drawSquare();
+                default -> System.out.println("Nothing you drew");
             }
 
         }
