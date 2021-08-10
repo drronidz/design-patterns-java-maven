@@ -10,27 +10,26 @@ DATE : 8/10/2021 12:26 AM
 import java.util.HashMap;
 
 public class PlayerFactory {
-    private static HashMap<String, Player> playersTypes = new HashMap<>();
+    private static final HashMap<String, Player> playersCache = new HashMap<>();
 
     public static Player getPlayer(String type) {
         Player player = null;
 
-        if(playersTypes.containsKey(type)) {
-            player = playersTypes.get(type);
+        if(playersCache.containsKey(type)) {
+            player = playersCache.get(type);
         } else {
             switch (type) {
-                case "Terrorist" :
+                case "Terrorist" -> {
                     System.out.println("Terrorist Created");
                     player = new Terrorist();
-                    break;
-                case "CounterTerrorist" :
+                }
+                case "CounterTerrorist" -> {
                     System.out.println("Counter Terrorist Created");
                     player = new CounterTerrorist();
-                    break;
-                default:
-                    System.out.println("We have only two type of Players!!");
+                }
+                default -> System.out.println("We have only two type of Players!!");
             }
-            playersTypes.put(type, player);
+            playersCache.put(type, player);
         }
         return player;
     }
