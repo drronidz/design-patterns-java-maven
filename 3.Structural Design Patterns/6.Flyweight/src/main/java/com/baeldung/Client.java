@@ -26,26 +26,29 @@ public class Client {
             switch (getRandomVehicleType()) {
                 case BUS -> {
                     System.out.println("---------------------------------------");
-                    Vehicle bus = new Bus(busEngine,getRandomColor());
+                    Vehicle bus = VehicleFactory.createVehicle(Type.BUS, getRandomColor(),busEngine);
                     bus.print();
                     bus.start();
                     bus.stop();
+                    System.out.println(bus.hashCode());
                     System.out.println("---------------------------------------");
                 }
                 case CAR -> {
                     System.out.println("---------------------------------------");
-                    Vehicle car = new Bus(carEngine,getRandomColor());
+                    Vehicle car = VehicleFactory.createVehicle(Type.CAR, getRandomColor(),carEngine);
                     car.print();
                     car.start();
                     car.stop();
+                    System.out.println(car.hashCode());
                     System.out.println("---------------------------------------");
                 }
                 case BIKE -> {
                     System.out.println("---------------------------------------");
-                    Vehicle bike = new Bike(bikeEngine,getRandomColor());
+                    Vehicle bike = VehicleFactory.createVehicle(Type.BIKE, getRandomColor(),bikeEngine);
                     bike.print();
                     bike.start();
                     bike.stop();
+                    System.out.println(bike.hashCode());
                     System.out.println("---------------------------------------");
                 }
             }
