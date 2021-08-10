@@ -14,6 +14,7 @@ import java.util.stream.IntStream;
 
 public class Client {
     public static void main(String[] args) {
+
         // Let us create 10 Locations.
         List<Location> locations = IntStream.range(0, 5)
                 .boxed()
