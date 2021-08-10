@@ -23,6 +23,8 @@ public class Main {
         shop.takeOrder(CoffeeFlavour.LATTE, CoffeeLatteArt.LITTLE_BUNNY, 6);
         shop.takeOrder(CoffeeFlavour.FRAPPUCCINO, CoffeeLatteArt.DISNEY, 9);
 
+        System.out.println("------------------------------------------------------------");
+
         System.out.println("Number of Order Objects: " + CoffeeShop.getNumberOfOrders());
 
         System.out.println("Number of Coffee Objects: " + CoffeeFactory.getNumberOfCoffee());

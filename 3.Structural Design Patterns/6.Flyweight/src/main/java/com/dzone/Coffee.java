@@ -9,19 +9,24 @@ DATE : 8/10/2021 1:54 AM
 
 public class Coffee {
 
-    protected final CoffeeFlavour flavourName;
-    protected final CoffeeLatteArt latteArt;
+    protected final CoffeeFlavour flavourName; // intrinsic attribute
 
-    public Coffee(CoffeeFlavour flavourName, CoffeeLatteArt latteArt) {
+
+    public Coffee(CoffeeFlavour flavourName) {
+        super();
         this.flavourName = flavourName;
-        this.latteArt = latteArt;
     }
 
     public CoffeeFlavour getFlavourName() {
         return flavourName;
     }
 
-    public CoffeeLatteArt getLatteArt() {
+    protected CoffeeLatteArt setLatteArt(CoffeeLatteArt latteArt) {
+        /*
+        * CoffeeLateART LatteArt will be act as extrinsic attribute
+        * So, that will be required in creating and processing of Coffee
+        * object as method parameters and will not be stored as class members
+        * */
         return latteArt;
     }
 

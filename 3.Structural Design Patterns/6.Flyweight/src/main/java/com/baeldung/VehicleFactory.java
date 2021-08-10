@@ -15,8 +15,6 @@ public class VehicleFactory {
 
     private static final HashMap<Type,Vehicle> vehiclesCache = new HashMap<>();
 
-    public VehicleFactory() {
-    }
 
     public static Vehicle createVehicle(Type type, Color color, Engine engine) {
         Vehicle vehicle = null;
