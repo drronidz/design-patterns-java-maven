@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ProxyInternetClient <<Class>> {
+    + main () : void
+}
+
+interface OfficeInternetAccess <<Interface>> {
+
+    + grantInternetAccess () : void
+}
+
+class ProxyInternetAccess <<Class>> {
+    - employeeName : String
+    - realInternetAccess : RealInternetAccess
+    + ProxyInternetAccess(String)
+    + getRole(String) : int
+    + grantInternetAccess () : void
+
+}
+
+class RealInternetAccess {
+    - employeeName : String
+
+    + RealInternetAccess (String)
+    + grantInternetAccess () : void
+}
+
+
+
+@enduml
