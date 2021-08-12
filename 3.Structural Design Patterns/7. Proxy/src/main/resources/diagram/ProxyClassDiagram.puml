@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client members
+
+Client -right-> Subject
+
+interface Subject <<Interface>> {
+    + Request()
+    //
+}
+hide Subject members
+show Subject methods
+
+class Proxy {
+    + Request ()
+}
+note right of Proxy::Request
+...
+realSubject->Request();
+...
+end note
+
+class RealSubject {
+    + Request ()
+}
+
+Subject <|-- Proxy
+Subject <|-- RealSubject
+Proxy -left-> RealSubject : realSubject
+
+
+@enduml
