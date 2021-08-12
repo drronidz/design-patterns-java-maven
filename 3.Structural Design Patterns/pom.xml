@@ -17,6 +17,7 @@
         <module>4.Decorator</module>
         <module>5.Facade</module>
         <module>6.Flyweight</module>
+        <module>7. Proxy</module>
     </modules>
 
 
