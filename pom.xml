@@ -12,6 +12,7 @@
         <module>1.Principles and Strategies of Design</module>
         <module>2.Creational Design Patterns</module>
         <module>3.Structural Design Patterns</module>
+        <module>4.Behavioral Design Patterns</module>
         <module>Tools</module>
     </modules>
     <properties>
