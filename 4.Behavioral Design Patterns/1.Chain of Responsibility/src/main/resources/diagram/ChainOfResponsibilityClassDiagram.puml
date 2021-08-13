@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client {
+    + main () : void
+}
+hide Client members
+show Client methods
+
+class Handler {
+    HandleRequest()
+}
+hide Handler members
+show Handler methods
+
+
+class ConcreteHandlerOne {
+    HandleRequest()
+}
+hide ConcreteHandlerOne members
+show ConcreteHandlerOne methods
+
+
+class ConcreteHandlerTwo {
+    HandleRequest()
+}
+hide ConcreteHandlerTwo members
+show ConcreteHandlerTwo methods
+
+Handler <|-- ConcreteHandlerOne
+Handler <|-- ConcreteHandlerTwo
+Client -right-> Handler
+Handler <-left- Handler : successor
+
+@enduml
