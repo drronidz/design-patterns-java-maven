@@ -1,0 +1,39 @@
+
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client members
+
+class Invoker
+hide Invoker members
+
+
+interface Command {
+    Execute()
+}
+hide Command members
+show Command methods
+
+class ConcreteCommand {
+    stat
+    Execute ()
+}
+note right of ConcreteCommand::Execute
+  receiver -> Action();
+end note
+
+class Receiver {
+    Action()
+}
+hide Receiver members
+show Receiver methods
+
+
+Client .right.> ConcreteCommand
+Client --> Receiver
+Command <|-- ConcreteCommand
+Command <--o Invoker
+Receiver <-right- ConcreteCommand  : receiver
+
+@enduml

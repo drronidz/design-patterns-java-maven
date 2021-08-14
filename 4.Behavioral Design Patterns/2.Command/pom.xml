@@ -9,10 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>4.Behavioral Design Patterns</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>1.Chain of Responsibility</module>
-        <module>2.Command</module>
-    </modules>
+    <artifactId>2.Command</artifactId>
+
+
 </project>
