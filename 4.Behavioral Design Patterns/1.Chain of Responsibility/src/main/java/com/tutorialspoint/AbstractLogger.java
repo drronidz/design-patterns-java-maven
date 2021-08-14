@@ -1,0 +1,34 @@
+package com.tutorialspoint;
+
+/*
+PROJECT NAME : design-patterns-java-maven
+Module NAME: IntelliJ IDEA
+Author Name : @ DRRONIDZ
+DATE : 8/14/2021 2:29 PM
+*/
+
+public abstract class AbstractLogger {
+    public static int INFO = 1;
+    public static int DEBUG = 2;
+    public static int ERROR = 3;
+
+    protected int level;
+
+    // Next element in chain or responsibility
+    protected AbstractLogger nextLogger;
+
+    public void setNextLogger(AbstractLogger nextLogger) {
+        this.nextLogger = nextLogger;
+    }
+
+    public void logMessage(int level, String message) {
+        if(this.level <= level) {
+            write(message);
+        }
+        if(nextLogger != null) {
+            nextLogger.logMessage(level, message);
+        }
+    }
+
+    public abstract void write(String message);
+}
