@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Command <<Java Interface>> {
+    + execute () : void
+}
+
+class Switch <<Java Class>> {
+    + Switch()
+    + storeAndExecute(Command) : void
+}
+
+class RestartCommand <<Java Class>> {
+    + RestartCommand(Computer)
+    + execute() : void
+}
+
+class ShutDownCommand <<Java Class>> {
+    + ShutDownCommand(Computer)
+    + execute() : void
+}
+
+class Computer <<Java Class>> {
+    Computer()
+    shutDown() : void
+    restart() : void
+}
+
+RestartCommand ..> Command
+ShutDownCommand ..> Command
+Switch -left-> Command
+
+Computer <-- RestartCommand
+Computer <-- ShutDownCommand
+
+class Client <<Java Class>> {
+    Client()
+    + main (String []) : void
+}
+
+@enduml
