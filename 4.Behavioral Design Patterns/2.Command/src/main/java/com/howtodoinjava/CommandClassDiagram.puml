@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface ICommand <<Java Interface>> {
+    + execute () : void
+}
+
+class Light <<Java Class>> {
+    Light()
+    turnOn () : void
+    turnOff () : void
+}
+
+class Fan <<Java Class>> {
+    Fan()
+    start () : void
+    stop () : void
+}
+
+class StartFanCommand <<Java Class>> {
+    StartFanCommand(Fan)
+    execute () : void
+}
+
+class StopFanCommand <<Java Class>> {
+    StopFanCommand(Fan)
+    execute () : void
+}
+
+class TurnOnLightCommand <<Java Class>> {
+    TurnOnLightCommand(Light)
+    execute () : void
+}
+
+class TurnOffLightCommand <<Java Class>> {
+    TurnOffLightCommand(Light)
+    execute () : void
+}
+
+class HomeAutomationRemote <<Java Class>> {
+    + HomeAutomationRemote()
+    + setCommand (ICommand) : void
+    + buttonPressed(): void
+}
+
+Fan <-- StartFanCommand : fan 0..1
+Fan <-- StopFanCommand : fan 0..1
+
+Light <-- TurnOnLightCommand
+Light <-- TurnOffLightCommand
+
+
+ICommand <.. StopFanCommand
+ICommand <.. StartFanCommand
+ICommand <.. TurnOffLightCommand
+ICommand <.. TurnOnLightCommand
+
+HomeAutomationRemote --> ICommand
+
+
+@enduml
