@@ -1,4 +1,4 @@
-package com.howtodoinjava;
+package com.howtodoinjava.command;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -7,7 +7,7 @@ Author Name : @ DRRONIDZ
 DATE : 8/15/2021 1:28 AM
 */
 
-import com.programcreek.Command;
+import com.howtodoinjava.receiver.Fan;
 
 public class StartFanCommand implements ICommand{
     private final Fan fan;

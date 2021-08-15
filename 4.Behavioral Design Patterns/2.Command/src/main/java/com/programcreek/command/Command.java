@@ -1,4 +1,4 @@
-package com.programcreek;
+package com.programcreek.command;
 
 /*
 PROJECT NAME : design-patterns-java-maven

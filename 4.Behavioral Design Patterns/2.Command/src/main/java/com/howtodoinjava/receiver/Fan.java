@@ -1,4 +1,4 @@
-package com.howtodoinjava;
+package com.howtodoinjava.receiver;
 
 /*
 PROJECT NAME : design-patterns-java-maven

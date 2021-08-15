@@ -1,4 +1,4 @@
-package com.programcreek;
+package com.programcreek.client;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -6,6 +6,13 @@ Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
 DATE : 8/15/2021 1:05 AM
 */
+
+import com.programcreek.command.Command;
+import com.programcreek.command.RestartCommand;
+import com.programcreek.command.ShutDownCommand;
+import com.programcreek.command.SleepCommand;
+import com.programcreek.invoker.Switch;
+import com.programcreek.receiver.Computer;
 
 public class Client {
     public static void main(String[] args) {

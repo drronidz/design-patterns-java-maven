@@ -1,4 +1,4 @@
-package com.howtodoinjava;
+package com.howtodoinjava.command;
 
 /*
 PROJECT NAME : design-patterns-java-maven

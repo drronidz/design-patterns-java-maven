@@ -1,4 +1,4 @@
-package com.howtodoinjava;
+package com.howtodoinjava.client;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -6,6 +6,13 @@ Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
 DATE : 8/15/2021 1:46 AM
 */
+
+import com.howtodoinjava.command.StartFanCommand;
+import com.howtodoinjava.command.StopFanCommand;
+import com.howtodoinjava.command.TurnOnLightCommand;
+import com.howtodoinjava.invoker.HomeAutomationRemote;
+import com.howtodoinjava.receiver.Fan;
+import com.howtodoinjava.receiver.Light;
 
 public class Client {
     public static void main(String[] args) {

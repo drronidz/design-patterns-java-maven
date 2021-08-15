@@ -1,4 +1,4 @@
-package com.howtodoinjava;
+package com.howtodoinjava.command;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -7,18 +7,19 @@ Author Name : @ DRRONIDZ
 DATE : 8/15/2021 1:29 AM
 */
 
-import com.programcreek.Command;
 
-public class TurnOnLightCommand implements ICommand {
+import com.howtodoinjava.receiver.Light;
+
+public class TurnOffLightCommand implements ICommand {
     private final Light light;
 
-    public TurnOnLightCommand(Light light) {
+    public TurnOffLightCommand(Light light) {
         super();
         this.light = light;
     }
 
     @Override
     public void execute() {
-        this.light.turnOn();
+        this.light.turnOff();
     }
 }
