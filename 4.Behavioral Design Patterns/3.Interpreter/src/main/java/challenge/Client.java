@@ -32,6 +32,5 @@ public class Client {
 
         Context context3 = new Context("Lucy");
         System.out.println("Lucy is male ? " + isMale.interpret(context3));
-
     }
 }
