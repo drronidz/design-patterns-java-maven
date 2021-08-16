@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client members
+
+
+class Context
+hide Context members
+
+
+abstract class AbstractExpression {
+    Interpret (Context)
+}
+hide AbstractExpression members
+show AbstractExpression methods
+
+
+
+class TerminalExpression {
+    Interpret (Context)
+}
+hide TerminalExpression members
+show TerminalExpression methods
+
+
+class NonTerminalExpression {
+    Interpret (Context)
+}
+hide NonTerminalExpression members
+show NonTerminalExpression methods
+
+AbstractExpression <|-- TerminalExpression
+AbstractExpression <|-- NonTerminalExpression
+NonTerminalExpression o--> AbstractExpression
+
+Client -right-> AbstractExpression
+Client --> Context
+
+@enduml
