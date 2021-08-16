@@ -1,7 +1,5 @@
 package baeldung;
 
-import baeldung.Row;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -18,9 +16,9 @@ class Context {
 
     static {
         List<Row> list = new ArrayList<>();
-        list.add(new Row("John", "Doe"));
-        list.add(new Row("Jan", "Kowalski"));
-        list.add(new Row("Dominic", "Doom"));
+        list.add(new Row("John", "Doe", 21));
+        list.add(new Row("Jan", "Kowalski", 30));
+        list.add(new Row("Dominic", "Doom", 40));
 
         tables.put("people", list);
     }
@@ -95,6 +93,7 @@ class Context {
             case "*" -> colIndex = -1;
             case "name" -> colIndex = 0;
             case "surname" -> colIndex = 1;
+            case "age" -> colIndex = 2;
         }
         if (colIndex != -1) {
             columnMapper = s -> Stream.of(s.split(" ")[colIndex]);
