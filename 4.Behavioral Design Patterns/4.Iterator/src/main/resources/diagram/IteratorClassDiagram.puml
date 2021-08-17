@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+hide Client members
+
+class Iterator {
+    + First()
+    + Next()
+    + isDone()
+    + CurrentItem()
+}
+hide Iterator members
+show Iterator methods
+
+class Aggregate {
+    + CreateIterator()
+}
+hide Aggregate members
+show Aggregate methods
+
+class ConcreteIterator
+hide ConcreteIterator members
+
+class ConcreteAggregate {
+    + CreateIterator()
+}
+note right of ConcreteAggregate::CreateIterator
+  return new ConcreteIterator(this)
+end note
+hide ConcreteAggregate members
+show ConcreteAggregate methods
+
+Aggregate <-left- Client
+Iterator <-right- Client
+
+Aggregate <|-- ConcreteAggregate
+Iterator <|-- ConcreteIterator
+
+ConcreteAggregate <-left- ConcreteIterator
+ConcreteIterator <.right. ConcreteAggregate
+
+@enduml
