@@ -35,7 +35,10 @@ public class ShapeIterator implements Iterator<Shape> {
         }
         if(shapes[pos-1] != null) {
             if (shapes.length - 1 - pos - 1 >= 0)
-                System.arraycopy(shapes, pos - 1 + 1, shapes, pos - 1, shapes.length - 1 - pos - 1);
+                System.arraycopy(shapes,
+                        pos - 1 + 1, shapes,
+                        pos - 1,
+                        shapes.length - 1 - pos - 1);
             shapes[shapes.length-1] = null;
         }
     }
