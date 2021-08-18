@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Mediator
+hide Mediator members
+
+class ConcreteMediator
+hide ConcreteMediator members
+
+interface Colleague
+hide Colleague members
+
+
+class ConcreteColleagueOne
+hide ConcreteColleagueOne members
+
+class ConcreteColleagueTwo
+hide ConcreteColleagueTwo members
+
+
+Mediator <-right- Colleague
+
+Mediator <|-- ConcreteMediator
+
+Colleague <|-- ConcreteColleagueOne
+Colleague <|-- ConcreteColleagueTwo
+
+ConcreteMediator -right-> ConcreteColleagueOne
+ConcreteMediator -right-> ConcreteColleagueTwo
+
+@enduml
