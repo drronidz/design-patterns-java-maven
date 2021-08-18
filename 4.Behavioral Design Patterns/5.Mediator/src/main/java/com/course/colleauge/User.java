@@ -1,4 +1,4 @@
-package com.course;
+package com.course.colleauge;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -6,6 +6,8 @@ Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
 DATE : 8/18/2021 4:23 PM
 */
+
+import com.course.mediator.ChatMediator;
 
 public abstract class User {
     protected ChatMediator mediator;

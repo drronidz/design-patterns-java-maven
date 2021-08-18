@@ -1,4 +1,4 @@
-package com.course;
+package com.course.colleauge;
 
 /*
 PROJECT NAME : design-patterns-java-maven
@@ -7,6 +7,7 @@ Author Name : @ DRRONIDZ
 DATE : 8/18/2021 4:31 PM
 */
 
+import com.course.mediator.ChatMediator;
 import com.tools.ConsoleColors;
 
 public class UserImpl extends User {

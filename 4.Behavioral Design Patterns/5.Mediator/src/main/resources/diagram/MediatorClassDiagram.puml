@@ -7,7 +7,7 @@ hide Mediator members
 class ConcreteMediator
 hide ConcreteMediator members
 
-interface Colleague
+abstract class Colleague
 hide Colleague members
 
 

@@ -7,6 +7,11 @@ Author Name : @ DRRONIDZ
 DATE : 8/18/2021 3:35 PM
 */
 
+import com.course.colleauge.User;
+import com.course.colleauge.UserImpl;
+import com.course.mediator.ChatMediator;
+import com.course.mediator.ChatMediatorImpl;
+
 public class Client {
     public static void main(String[] args) {
         ChatMediator mediator = new ChatMediatorImpl();
