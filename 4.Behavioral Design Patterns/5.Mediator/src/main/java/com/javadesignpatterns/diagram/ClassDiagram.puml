@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Party {
+    + addMember(PartyMember) : void
+    + act((PartyMember, Action) : void
+}
+hide Party members
+show Party methods
+
+class PartyImpl implements Party{
+    PartyImpl()
+    act(PartyMember,Action) : void
+    addMember(PartyMember) : void
+}
+hide PartyImpl members
+show PartyImpl methods
+
+enum Action {
+    HUNT:Action
+    TALE:Action
+    GOLD:Action
+    ENEMY:Action
+    + Action ()
+    + toString () : String
+}
+
+Party .left.> Action
+
+interface PartyMember {
+    joinedParty(Party) : void
+    partyAction(Action) : void
+    act(Action) : void
+}
+hide PartyMember members
+show PartyMember methods
+
+PartyImpl --> PartyMember
+PartyMemberBase .right.|> PartyMember
+PartyMemberBase -left-> Party
+
+abstract class PartyMemberBase {
+    + PartyMemberBase()
+    + joinedParty(Party) : void
+    + partyAction (Action) : void
+    + act (Action) : void
+    + toString() : String
+}
+hide PartyMemberBase members
+show PartyMemberBase methods
+
+PartyMemberBase <-- Rogue
+PartyMemberBase <-- Hobbit
+PartyMemberBase <-- Hunter
+PartyMemberBase <-- Wizard
+
+class Rogue {
+    + Rogue()
+    + toString() : String
+}
+hide Rogue members
+show Rogue methods
+
+class Hobbit {
+    + Hobbit()
+    + toString() : String
+}
+hide Hobbit members
+show Hobbit methods
+
+class Hunter {
+    + Hunter()
+    + toString() : String
+}
+hide Hunter members
+show Hunter methods
+
+class Wizard {
+    + Wizard()
+    + toString() : String
+}
+hide Wizard members
+show Wizard methods
+
+@enduml
