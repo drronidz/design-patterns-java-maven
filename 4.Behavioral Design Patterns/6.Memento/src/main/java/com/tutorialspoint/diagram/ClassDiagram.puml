@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Originator {
+    - state : String
+    + setState () : void
+    + getState () : String
+    + saveStateToMemento () : Memento
+    + getStateFromMemento () : void
+}
+
+class Memento {
+    - state : String
+    + Memento()
+    + getState() : String
+}
+
+class CareTaker {
+    - mementos : List <Memento>
+    + add() : void
+    + get() : Memento
+}
+
+Originator --> Memento
+CareTaker --> Memento
+
+
+@enduml
