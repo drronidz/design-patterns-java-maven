@@ -18,5 +18,6 @@
         <module>4.Iterator</module>
         <module>5.Mediator</module>
         <module>6.Memento</module>
+        <module>7.Observer</module>
     </modules>
 </project>
