@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Weather << Java Class >> {
+    + Weather ()
+    + addObserver(WeatherObserver) : void
+    + removeObserver(WeatherObserver) : void
+    + timePasses() : void
+    - notifyObservers() : void
+}
+
+enum WeatherType << Java Enumeration >> {
+    SUNNY :  WeatherType
+    RAINY :  WeatherType
+    WINDY :  WeatherType
+    COLD  :  WeatherType
+
+    WeatherType ()
+    toString () : String
+}
+
+interface WeatherObserver << Java Interface >>{
+    + update(WeatherType) : void
+}
+
+class Hobbits << Java Class >> {
+    + Hobbits()
+    + update(WeatherType) : void
+}
+
+class Orcs << Java Class >> {
+    + Orcs()
+    + update(WeatherType)
+}
+
+Weather -left-> WeatherType : currentWeather
+Weather --> WeatherObserver : observers
+
+WeatherObserver <|.. Orcs
+WeatherObserver <|.. Hobbits
+
+@enduml
