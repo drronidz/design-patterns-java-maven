@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface State <<Java Interface>> {
+    + doAction () : void
+}
+hide State members
+show State methods
+
+class Context {
+    - state : State
+    + Context () : void
+    + getState () : State
+    + setState () : void
+}
+
+
+class StartState implements State {
+    + doAction () : void
+}
+hide StartState members
+show StartState methods
+
+
+class StopState implements State {
+    + doAction () : void
+}
+hide StopState members
+show StopState methods
+
+State <-- Context : uses
+
+
+
+@enduml
