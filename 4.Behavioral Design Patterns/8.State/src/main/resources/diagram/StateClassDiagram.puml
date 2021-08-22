@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Context {
+    Request ()
+}
+note left of Context::Request
+  state -> Handle()
+end note
+
+
+class State {
+    Handle()
+}
+
+class ConcreteStateA {
+    Handle()
+}
+
+class ConcreteStateB {
+    Handle()
+}
+Context o-right-> State : state
+State <|-- ConcreteStateA
+State <|-- ConcreteStateB
+
+@enduml
