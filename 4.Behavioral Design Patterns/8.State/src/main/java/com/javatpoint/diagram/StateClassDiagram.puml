@@ -48,6 +48,7 @@ class Controller {
     + Controller ()
     + setAccountingConnection () : void
     + setManagementConnection () : void
+    + setSalesConnection () : void
     + open () : void
     + close () : void
     + log () : void
