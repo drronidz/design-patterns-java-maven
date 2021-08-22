@@ -1,0 +1,63 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+' We can call it also State
+interface Connection {
+    + open () : void
+    + close () : void
+    + log () : void
+    + update () : void
+}
+hide Connection members
+show Connection methods
+
+class Accounting implements Connection{
+    + open () : void
+    + close () : void
+    + log () : void
+    + update () : void
+}
+hide Accounting members
+show Accounting methods
+
+class Sales implements Connection{
+    + open () : void
+    + close () : void
+    + log () : void
+    + update () : void
+}
+hide Sales members
+show Sales methods
+
+
+class Management implements Connection{
+    + open () : void
+    + close () : void
+    + log () : void
+    + update () : void
+}
+hide Management members
+show Management methods
+
+' We can call it also Context
+class Controller {
+    + accounting : Accounting
+    + management : Management
+    + sales : Sales
+    - connection : Connection
+    + Controller ()
+    + setAccountingConnection () : void
+    + setManagementConnection () : void
+    + open () : void
+    + close () : void
+    + log () : void
+    + update () : void
+}
+
+Controller -left-> Connection : uses
+
+
+
+
+
+@enduml
