@@ -21,5 +21,6 @@
         <module>7.Observer</module>
         <module>8.State</module>
         <module>9.Strategy</module>
+        <module>10.Template Method</module>
     </modules>
 </project>
