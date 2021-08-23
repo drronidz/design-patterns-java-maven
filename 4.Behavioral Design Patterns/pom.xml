@@ -20,5 +20,6 @@
         <module>6.Memento</module>
         <module>7.Observer</module>
         <module>8.State</module>
+        <module>9.Strategy</module>
     </modules>
 </project>

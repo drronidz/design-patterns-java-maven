@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Context  {
+    ContextInterface ()
+}
+hide Context members
+show Context methods
+
+class Strategy {
+    AlgorithmInterface()
+}
+hide Strategy members
+show Strategy methods
+
+Context o->Strategy : strategy
+
+class ConcreteStrategyA extends Strategy{
+    AlgorithmInterface()
+}
+hide ConcreteStrategyA members
+show ConcreteStrategyA methods
+
+class ConcreteStrategyB extends Strategy{
+    AlgorithmInterface()
+}
+hide ConcreteStrategyB members
+show ConcreteStrategyB methods
+
+class ConcreteStrategyC extends Strategy{
+    AlgorithmInterface()
+}
+hide ConcreteStrategyC members
+show ConcreteStrategyC methods
+
+
+@enduml
