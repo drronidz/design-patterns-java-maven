@@ -4,18 +4,18 @@ package guru;
 PROJECT NAME : design-patterns-java-maven
 Module NAME: IntelliJ IDEA
 Author Name : @ DRRONIDZ
-DATE : 8/24/2021 11:38 PM
+DATE : 8/24/2021 11:54 PM
 */
 
-public class OperaMailClient implements MailClient{
+public class ZimbraMailClient implements MailClient{
     @Override
     public void sendMail(String[] mailInfo) {
-        System.out.println("OperaMailClient: Sending mail");
+        System.out.println("ZimbraMailClient: Sending mail");
     }
 
     @Override
     public void receiveMail(String[] mailInfo) {
-        System.out.println("OperaMailClient: Receiving mail");
+        System.out.println("ZimbraMailClient: Receiving mail");
     }
 
     @Override
@@ -23,6 +23,4 @@ public class OperaMailClient implements MailClient{
         visitor.visit(this);
         return true;
     }
-
-
 }

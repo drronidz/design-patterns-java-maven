@@ -10,6 +10,5 @@ DATE : 8/24/2021 11:37 PM
 public interface MailClient {
     void sendMail(String [] mailInfo);
     void receiveMail(String[] mailInfo);
-    boolean configureForMac();
-    boolean configureForWindows();
+    boolean accept(MailClientVisitor visitor);
 }

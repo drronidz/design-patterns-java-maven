@@ -1,6 +1,56 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+class Client
+hide Client members
 
+Client -left-> MailClient
+Client -right->MailClientVisitor
 
+interface MailClient {
+    + sendMail(String [] ) : void
+    + receiveMail(String [] ) : void
+    + receive (MailClientVisitor) : boolean
+}
+
+class OperaMailClient implements MailClient{
+    + sendMail (String []) : void
+    + receiveMail (String []) : void
+    + receive (MailClientVisitor) : boolean
+}
+
+class SquirrelMailClient implements MailClient{
+    + sendMail (String []) : void
+    + receiveMail (String []) : void
+    + receive (MailClientVisitor) : boolean
+}
+class ZimbraMailClient implements MailClient{
+    + sendMail (String []) : void
+    + receiveMail (String []) : void
+    + receive (MailClientVisitor) : boolean
+}
+
+interface MailClientVisitor {
+    + visit (OperaMailClient) : void
+    + visit (ZimbraMailClient) : void
+    + visit (SquirrelMailClient) : void
+}
+
+class MacMailClientVisitor implements MailClientVisitor {
+    + visit (OperaMailClient) : void
+    + visit (ZimbraMailClient) : void
+    + visit (SquirrelMailClient) : void
+}
+
+class WindowsMailClientVisitor implements MailClientVisitor {
+    + visit (OperaMailClient) : void
+    + visit (ZimbraMailClient) : void
+    + visit (SquirrelMailClient) : void
+}
+
+class LinuxMailClientVisitor implements MailClientVisitor {
+    + visit (OperaMailClient) : void
+    + visit (ZimbraMailClient) : void
+    + visit (SquirrelMailClient) : void
+}
 @enduml

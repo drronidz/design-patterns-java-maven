@@ -10,5 +10,5 @@ DATE : 8/24/2021 11:43 PM
 public interface MailClientVisitor {
     void visit(OperaMailClient mailClient);
     void visit(SquirrelMailClient mailClient);
-
+    void visit(ZimbraMailClient mailClient);
 }

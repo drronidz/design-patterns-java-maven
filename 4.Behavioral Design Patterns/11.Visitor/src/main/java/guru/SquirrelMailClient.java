@@ -19,14 +19,8 @@ public class SquirrelMailClient implements MailClient{
     }
 
     @Override
-    public boolean configureForMac() {
-        System.out.println("Configuration of Squirrel mail client for MAC complete");
-        return true;
-    }
-
-    @Override
-    public boolean configureForWindows() {
-        System.out.println("Configuration of Squirrel mail client for Windows complete");
+    public boolean accept(MailClientVisitor visitor) {
+        visitor.visit(this);
         return true;
     }
 }
