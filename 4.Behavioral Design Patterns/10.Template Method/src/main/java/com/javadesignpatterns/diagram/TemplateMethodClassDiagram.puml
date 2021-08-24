@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class StealingTemplate {
+    + StealingMethod()
+    - confuseTarget(String) : void
+    - pickTarget() : String
+    + steal() : void
+    - stealTheItem(String) : void
+}
+
+class SubtleMethod extends StealingTemplate{
+    + SubtleMethod()
+    - confuseTarget (target : String)
+    - pickTarget() : String
+    - stealTheItem (target : String)
+}
+
+class HitAndRunMethod extends StealingTemplate {
+    + HitAndRunMethod()
+    - confuseTarget (target : String)
+    - pickTarget() : String
+    - stealTheItem (target : String)
+}
+
+class HalflingThief {
+    - method : StealingTemplate
+    + HalflingThief(method : StealingTemplate)
+    + changeMethod((method : StealingTemplate)
+    + steal()
+
+}
+HalflingThief -left-> StealingTemplate : method
+@enduml
