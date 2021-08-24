@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Visitor {
+    VisitConcreteElementA(ConcreteElementA)
+    VisitConcreteElementB(ConcreteElementB)
+}
+
+class ConcreteVisitorOne extends Visitor {
+    VisitConcreteElementA(ConcreteElementA)
+    VisitConcreteElementB(ConcreteElementB)
+}
+
+class ConcreteVisitorTwo extends Visitor {
+    VisitConcreteElementA(ConcreteElementA)
+    VisitConcreteElementB(ConcreteElementB)
+}
+
+class ObjectStructure
+hide ObjectStructure members
+
+ObjectStructure -left-> Element
+
+abstract class Element {
+    Accept(Visitor)
+}
+
+class ConcreteElementA extends Element {
+    Accept (Visitor visitor)
+    OperationA()
+}
+note right of ConcreteElementA::Accept
+  v -> VisitConcreteElementA(this)
+end note
+
+class ConcreteElementB extends Element {
+    Accept (Visitor visitor)
+    OperationB()
+}
+note right of ConcreteElementB::Accept
+  v -> VisitConcreteElementA(this)
+end note
+
+class Client
+hide Client members
+
+Client -left-> Visitor
+Client --> ObjectStructure
+
+@enduml
