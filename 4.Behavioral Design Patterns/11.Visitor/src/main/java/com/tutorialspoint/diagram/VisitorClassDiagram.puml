@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+interface ComputerPart << Java Interface >> {
+     + accept() : void
+}
+
+class Keyboard implements ComputerPart {
+    + accept() : void
+}
+
+class Mouse implements ComputerPart {
+    + accept() : void
+}
+
+class Monitor implements ComputerPart {
+    + accept() : void
+}
+
+class Computer implements ComputerPart {
+    + parts[] : ComputerPart
+    + Computer()
+    + accept() : void
+}
+
+
+interface ComputerPartVisitor {
+     + visit (Computer) : void
+     + visit (Mouse)    : void
+     + visit (Keyboard) : void
+     + visit (Monitor)  : void
+}
+
+class ComputerPartDisplayVisitor implements ComputerPartVisitor {
+     + visit (Computer) : void
+     + visit (Mouse)    : void
+     + visit (Keyboard) : void
+     + visit (Monitor)  : void
+}
+
+class Client
+hide Client members
+
+Client -left-> ComputerPart
+Client -right-> ComputerPartDisplayVisitor
+
+
+@enduml
